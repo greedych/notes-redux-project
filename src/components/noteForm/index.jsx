@@ -21,6 +21,12 @@ function NoteForm({ dispatch }) {
       id: prev.id + 1,
     }));
     dispatch(addNote(noteData));
+    setNoteData((prev) => ({
+      ...prev,
+      title: "",
+      text: "",
+      id: prev.id,
+    }));
   };
 
   console.log(noteData);
