@@ -1,6 +1,8 @@
+import styles from "./styles.module.css";
+
 function Header() {
   return (
-    <div>
+    <div className={styles.headerBox}>
       <h1>My Notes</h1>
     </div>
   );
