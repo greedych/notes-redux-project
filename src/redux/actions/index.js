@@ -5,9 +5,16 @@ export const addNote = (newNote) => {
   };
 };
 
-export const removeNote = (deleteNote) => {
+export const removeNote = (id) => {
   return {
     type: "REMOVE_NOTE",
-    payload: deleteNote,
+    payload: id,
+  };
+};
+
+export const editNote = (editData) => {
+  return {
+    type: "EDIT_NOTE",
+    payload: editData,
   };
 };

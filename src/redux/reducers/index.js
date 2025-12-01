@@ -17,6 +17,18 @@ const notesReduser = (state = initialState, action) => {
     };
   }
 
+  if (action.type === "EDIT_NOTE") {
+    return {
+      ...state,
+      notes: state.notes.map((note) => {
+        if (note.id === action.payload.id) {
+          return action.payload;
+        }
+
+        return state.notes;
+      }),
+    };
+  }
   return state;
 };
 
