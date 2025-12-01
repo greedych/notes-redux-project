@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { connect } from "react-redux";
 import { addNote } from "../../redux/actions";
+import styles from "./styles.module.css";
 
 function NoteForm({ dispatch }) {
   const [noteData, setNoteData] = useState({
@@ -32,10 +33,7 @@ function NoteForm({ dispatch }) {
   console.log(noteData);
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      style={{ display: "flex", alignItems: "center" }}
-    >
+    <form className={styles.notesForm} onSubmit={handleSubmit}>
       <input
         type="text"
         placeholder="Title"
@@ -47,6 +45,7 @@ function NoteForm({ dispatch }) {
         value={noteData.text}
         name="text"
         onChange={(e) => handleChange(e)}
+        placeholder="Text"
       ></textarea>
       <button>Add Note</button>
     </form>

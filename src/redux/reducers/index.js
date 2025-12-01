@@ -25,7 +25,7 @@ const notesReduser = (state = initialState, action) => {
           return action.payload;
         }
 
-        return state.notes;
+        return note;
       }),
     };
   }
