@@ -1,16 +1,12 @@
 import { connect } from "react-redux";
+import NoteItem from "../noteItem";
 
 function NoteList({ notes }) {
   console.log(notes);
   return (
     <div>
       {notes.map((note) => {
-        return (
-          <div>
-            <h1>{note.title}</h1>
-            <p>{note.text}</p>
-          </div>
-        );
+        return <NoteItem title={note.title} text={note.text} id={note.id} />;
       })}
     </div>
   );

@@ -10,6 +10,13 @@ const notesReduser = (state = initialState, action) => {
     };
   }
 
+  if (action.type === "REMOVE_NOTE") {
+    return {
+      ...state,
+      notes: state.notes.filter((note) => note.id !== action.payload),
+    };
+  }
+
   return state;
 };
 

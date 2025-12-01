@@ -32,7 +32,10 @@ function NoteForm({ dispatch }) {
   console.log(noteData);
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form
+      onSubmit={handleSubmit}
+      style={{ display: "flex", alignItems: "center" }}
+    >
       <input
         type="text"
         placeholder="Title"
